@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8" />
-<title>Fluid Simulator</title>
-<link rel="stylesheet" type="text/css" href="simulator.css" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+  <meta charset="utf-8" />
+  <title>Fluid Simulator</title>
+  <link rel="stylesheet" type="text/css" 
+    href="bower_components/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-<h1>Fluid Simulator</h1>
-<p>This Java program is a Swing application for simulating fluid physics. It
-was ported from a desktop application to an applet and, as a result, font
-rendering is weird. It uses a particle system to mimic the appearance of a
-liquid inside a bottle.</p>
-<p>You can use your mouse to pick up the fluid, and change the direction of the
-gravity, and other settings, from the menu on the right.</p>
-<p>The color of the fluid indicates the pressure at a given point.</p>
-<applet code="Run" archive="FluidSimulator.jar" width="700" height="450">
-  <param name="permissions" value="sandbox" />
-</applet>
-<p>This project was made with the help of Alexandre D'Amboise.</p>
+<div class="container">
+  <h1>Fluid Simulator</h1>
+
+  <p>This Java program is a Swing application for simulating fluid physics. It
+  was ported from a desktop application to an applet and, as a result, font
+  rendering may be weird. It uses a particle system to mimic the appearance of
+  a liquid inside a bottle.</p>
+
+  <p>You can use your mouse to pick up the fluid, and change the direction of the
+  gravity, and other settings, from the menu on the right.</p>
+
+  <p>The color of the fluid indicates the pressure at a given point.</p>
+
+  <applet id="simulator" code="Run" archive="FluidSimulator.jar" width="700" height="450">
+    <param name="permissions" value="sandbox" />
+  </applet>
+
+  <p>This project was made with the help of Alexandre D'Amboise.</p>
+</div>
 </body>
 </html>
