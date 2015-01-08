@@ -42,19 +42,6 @@ public class SpriteSet {
   // charge les images colorees dans le tableau et cree l'image de base
   private void loadSprites(String fileName) {
     // lire le fichier d'image
-    // URL file = ClassLoader.getSystemClassLoader ().getResource (fileName);
-    /*if (file == null) {
-      System.out.println ("Incapable de trouver l'image " + fileName + ".");
-      System.exit (0);
-    }
-    try {
-      baseSprite = ImageIO.read (file);
-    }
-    catch (IOException error) {
-      System.out.println ("Erreur dans le chargment de l'image " + fileName + ".");
-      error.printStackTrace ();
-      System.exit (0);
-    }*/
     URL file = getClass().getResource(fileName);
     ImageIcon icon = new ImageIcon(file);
     baseSprite = new BufferedImage(
@@ -108,7 +95,7 @@ public class SpriteSet {
 	 * @return Couleur de l'image donnee.
 	 */
 	public Color colorOfSprite(int index) {
-		return colorOfSpriteWithAlpha(index,255);//colorScale.getColor(indexToFraction(index));
+		return colorOfSpriteWithAlpha(index,255);
 	}
 	
 	/**

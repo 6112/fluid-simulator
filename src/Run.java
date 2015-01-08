@@ -65,43 +65,24 @@ public class Run extends JApplet implements Serializable {
   /**
    * Lance l'application.
    */
-  /*public static void main (String[] args) {
-    // utiliser l'anticrénelage pour le texte
-    System.setProperty("awt.useSystemAAFontSettings","on");
-    System.setProperty("swing.aatext", "true");
-    // demarrer l'application
-    EventQueue.invokeLater (new Runnable () {
-      public void run () {
-        try {
-          Run frame = new Run ();
-          frame.setVisible (true);
-        }
-        catch (Exception e) {
-          e.printStackTrace ();
-        }
-      }
-    });
-  }*/
-
   public void init () {
-    // System.setProperty("awt.useSystemAAFontSettings","on");
-    // System.setProperty("swing.aatext", "true");
-    try {
+    /*try {
       Run applet = new Run();
-      // applet.setVisible(true);
     }
     catch (Exception e) {
-      e.printStackTrace();
-    }
+      // e.printStackTrace();
+      System.exit(0);
+    }*/
+    /*try{
+      // Run applet = new Run();
+    }catch(Exception e){
+    }*/
   }
 
   /**
    * Creer la fenetre de l'application.
    */
   public Run () {
-    // setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
-    // setResizable(false);
-    // setTitle ("Fluid Simulator");
     contentPane = new JPanel ();
     contentPane.setBorder (new EmptyBorder (5, 5, 5, 5));
     contentPane.setLayout (new BorderLayout());

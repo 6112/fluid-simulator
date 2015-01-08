@@ -48,13 +48,10 @@ public class OptionsView extends JPanel implements Serializable {
 	 * Constructeur principal.
 	 */
 	public OptionsView(WorldMatrix world, Simulation simulation) {
-		//setBackground(Color.DARK_GRAY);
 		setLayout(null);
 		simul = simulation;
 		//Ajout d'un curseur qui permet de modifier la valeur de la gravite
 		gravitySlider = new JSlider();
-		//gravitySlider.setBackground(Color.DARK_GRAY);
-		//gravitySlider.setForeground(Color.LIGHT_GRAY);
 		gravitySlider.setMaximum(300);
 		gravitySlider.setMinimum(200);
 		gravitySlider.setValue((int) simul.getGravity().getMagnitude());
@@ -72,8 +69,6 @@ public class OptionsView extends JPanel implements Serializable {
 		add(gravitySlider);
 		//Ajout d'un curseur qui permet de modifier la valeur de la viscosite
 		viscositySlider = new JSlider();
-		//viscositySlider.setBackground(Color.DARK_GRAY);
-		//viscositySlider.setForeground(Color.LIGHT_GRAY);
 		viscositySlider.setMaximum(1000);
 		viscositySlider.setMinimum(0);
 		viscositySlider.setValue((int) ((simul.getViscosity() - MINIMUM_VISCOSITY) 
@@ -93,14 +88,8 @@ public class OptionsView extends JPanel implements Serializable {
 		add(viscositySlider);
 		//Ajout d'un curseur qui permet de modifier la valeur de la densite au repos
 		restDensSlider = new JSlider();
-		//restDensSlider.setBackground(Color.DARK_GRAY);
-		//restDensSlider.setForeground(Color.LIGHT_GRAY);
-		//restDensSlider.setMajorTickSpacing(2);
-		//restDensSlider.setMinorTickSpacing(1);
 		restDensSlider.setMinimum(10);
 		restDensSlider.setMaximum(20);
-		//restDensSlider.setPaintTicks(true);
-		//restDensSlider.setPaintLabels(true);
 		restDensSlider.setValue((int) simul.getRestDensity());
 		//Ecouteur permettant d'obtenir la valeur courante du curseur et l'applique au parametre de
 		//densite au repos
@@ -115,8 +104,6 @@ public class OptionsView extends JPanel implements Serializable {
 		restDensSlider.setBounds(10, 154, 180, 50);
 		add(restDensSlider);
 		smallCheckbox = new JCheckBox("Show particles");
-		//smallCheckbox.setBackground(Color.DARK_GRAY);
-		//smallCheckbox.setForeground(Color.LIGHT_GRAY);
 		smallCheckbox.setSelected(false);
 		smallCheckbox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {

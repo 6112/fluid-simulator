@@ -47,7 +47,6 @@ public class AngleView extends JPanel {
 	 */
 	public AngleView(Simulation simulation) {
 		super();
-		//setBackground(Color.GRAY);
 		setLayout(null);
 		this.simulation = simulation;
 		this.addMouseListener (new MouseAdapter(){
@@ -87,7 +86,6 @@ public class AngleView extends JPanel {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 		
-		//g2d.setBackground(Color.DARK_GRAY);
 		g2d.clearRect(0, 0, getWidth(), getHeight());
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		
