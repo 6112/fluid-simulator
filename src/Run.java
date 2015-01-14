@@ -83,6 +83,7 @@ public class Run extends JApplet implements Serializable {
    * Creer la fenetre de l'application.
    */
   public Run () {
+    System.out.println("hello world");
     contentPane = new JPanel ();
     contentPane.setBorder (new EmptyBorder (5, 5, 5, 5));
     contentPane.setLayout (new BorderLayout());
