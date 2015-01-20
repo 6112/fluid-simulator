@@ -133,7 +133,6 @@ public class SimulationView extends JPanel implements Runnable, Serializable {
 			velocity = velocity.normalize(Math.max(velocity.getMagnitude(), MINIMUM_VELOCITY));
 			graphics.setStroke(new BasicStroke(2));
 			graphics.setColor(Color.RED);
-			// velocity.draw(graphics, world);
 			graphics.translate(- particle.getX(), particle.getY());
 		}
 		// dessiner une bordure noire de 1 pixel

@@ -36,7 +36,6 @@ public class ViscositySolver {
             Particle neighbor = neighborIterator.next ();
             Vector neighborPosition = neighbor.getPositionVector ();
             // distance vectorielle entre les deux voisins
-            //Vector displacement = neighborPosition.minus (position);
             Vector displacement = position.minus (neighborPosition);
             // velocite interieure
             double inwardVelocity = particle.getVelocity ().minus (neighbor.getVelocity ())

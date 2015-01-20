@@ -66,24 +66,12 @@ public class Run extends JApplet implements Serializable {
    * Lance l'application.
    */
   public void init () {
-    /*try {
-      Run applet = new Run();
-    }
-    catch (Exception e) {
-      // e.printStackTrace();
-      System.exit(0);
-    }*/
-    /*try{
-      // Run applet = new Run();
-    }catch(Exception e){
-    }*/
   }
 
   /**
    * Creer la fenetre de l'application.
    */
   public Run () {
-    System.out.println("hello world");
     contentPane = new JPanel ();
     contentPane.setBorder (new EmptyBorder (5, 5, 5, 5));
     contentPane.setLayout (new BorderLayout());
@@ -92,7 +80,8 @@ public class Run extends JApplet implements Serializable {
     createSimulation ();
     // composant principal
     stage = new SimulationView (world, simulation);
-    stage.setPreferredSize(new Dimension((int) WORLD_WIDTH, (int) WORLD_HEIGHT));
+    stage.setPreferredSize(new Dimension((int) WORLD_WIDTH,
+                                         (int) WORLD_HEIGHT));
     add (stage, BorderLayout.CENTER);
     // menu a droite
     JPanel panel = new JPanel();

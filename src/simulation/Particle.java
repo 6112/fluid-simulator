@@ -214,13 +214,11 @@ public class Particle implements Drawable, Comparable<Particle> {
     private BufferedImage chooseSprite () {
         // si mis en evidence
         if (highlighted) {
-            //return highlightedSprite;
         	return highlightedSpriteSet.getSprite(0);
         }
         // si pas mis en evidence
         else {
             // utiliser une image dont la couleur depend de la pression locale
-            //return spriteTable.get (chooseSpriteIndex ());
         	return spriteSet.getSprite(chooseSpriteIndex());
         }
     }
