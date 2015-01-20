@@ -1,3 +1,0 @@
-Permissions: sandbox
-Codebase: 6112.github.io
-Application-Name: Fluid Simulator
