@@ -15,12 +15,16 @@ for that browser.
 
 You can also use the applet viewer to try out the applet in a separate window.
 
-    appletviewer FluidSimulator.jar
+```bash
+appletviewer FluidSimulator.jar
+```
 
 ## Building
 
 Assuming you have Apache Ant installed, you can build simply by using the `ant`
 command.
 
-    ant clean
-    ant
+```bash
+ant clean
+ant
+```
