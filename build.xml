@@ -4,11 +4,11 @@
   <property name="build.dir" value="." />
   <property name="classes.dir" value="${build.dir}/bin" />
   <property name="jar.dir" value="." />
-  <property name="main-class" value="Run" />
 
   <target name="clean">
     <delete dir="${classes.dir}" />
-    <delete file="${jar.dir}/FluidSimulator.jar" />
+    <delete file="${jar.dir}/FluidSimulatorApplet.jar" />
+    <delete file="${jar.dir}/FluidSimulatorStandalon.jar" />
   </target>
 
   <target name="compile">
@@ -19,10 +19,11 @@
     </copy>
   </target>
 
-  <target name="jar">
-    <jar destfile="${jar.dir}/FluidSimulator.jar" basedir="${classes.dir}">
+  <target name="applet">
+    <jar destfile="${jar.dir}/FluidSimulatorApplet.jar" 
+      basedir="${classes.dir}">
       <manifest>
-        <attribute name="Main-Class" value="${main-class}" />
+        <attribute name="Main-Class" value="RunApplet" />
         <attribute name="Permissions" value="sandbox" />
         <attribute name="Application-Name" value="Fluid Simulator" />
         <attribute name="Codebase" value="6112.github.io" />
@@ -30,5 +31,14 @@
     </jar>
   </target>
 
-  <target name="default" depends="compile,jar" />
+  <target name="standalone">
+    <jar destfile="${jar.dir}/FluidSimulatorStandalone.jar" 
+      basedir="${classes.dir}">
+      <manifest>
+        <attribute name="Main-Class" value="RunStandalone" />
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="default" depends="compile,applet,standalone" />
 </project>

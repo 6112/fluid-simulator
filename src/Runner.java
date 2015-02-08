@@ -2,6 +2,9 @@ import geometry.Polygon;
 import geometry.Rectangle;
 import graphics.WorldMatrix;
 
+import java.awt.Container;
+import javax.swing.RootPaneContainer;
+
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
@@ -28,18 +31,12 @@ import component.AngleView;
 import component.OptionsView;
 import component.SimulationView;
 
-/**
- * Classe principale du projet, celle qui permet de creer la fenetre
- * de l'application et de lancer celle-ci.
- * 
- * @author Alexandre D'Amboise, Nicolas Ouellet-Payeur
- * 
- * @version 13 fevrier 2014 
- *  
- */
-public class Run extends JApplet implements Serializable {
-  public static final long serialVersionUID = 1L;
 
+/**
+ * Utilisé pour 
+ **/
+
+public class Runner {
   // dimensions du monde
   private final double WORLD_WIDTH = 400;
   private final double WORLD_HEIGHT = 400;
@@ -49,6 +46,8 @@ public class Run extends JApplet implements Serializable {
 
   // nombre de particules mises en evidence (dessinees en blanc)
   private final int HIGHLIGHTED_PARTICLE_COUNT = PARTICLE_COUNT / 30;
+
+  private RootPaneContainer root;
 
   private JPanel contentPane;
 
@@ -62,27 +61,23 @@ public class Run extends JApplet implements Serializable {
 
   private boolean showParticles = false;
 
-  /**
-   * Lance l'application.
-   */
-  public void init () {
+  public Runner(RootPaneContainer root) {
+    this.root = root;
+    start();
   }
 
-  /**
-   * Creer la fenetre de l'application.
-   */
-  public Run () {
+  private void start() {
     contentPane = new JPanel ();
     contentPane.setBorder (new EmptyBorder (5, 5, 5, 5));
     contentPane.setLayout (new BorderLayout());
-    setContentPane (contentPane);
+    root.setContentPane (contentPane);
     // creer la simulation
     createSimulation ();
     // composant principal
     stage = new SimulationView (world, simulation);
     stage.setPreferredSize(new Dimension((int) WORLD_WIDTH,
                                          (int) WORLD_HEIGHT));
-    add (stage, BorderLayout.CENTER);
+    contentPane.add (stage, BorderLayout.CENTER);
     // menu a droite
     JPanel panel = new JPanel();
     panel.setPreferredSize(new Dimension(300, 400));
